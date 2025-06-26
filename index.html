@@ -1,27 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GR Textbook Website</title>
+    <!-- EDIT THIS: Change the title to your book's title -->
+    <title>Textbook Title - Official Website</title>
+
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Source Serif Pro for a classic, readable look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            background-color: #f9f9f9;
-            color: #333;
+            font-family: 'Source Sans 3', sans-serif;
+            background-color: #f9fafb; /* A light, academic-friendly gray */
         }
-        h1 {
-            color: #1a1a1a;
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Source Serif 4', serif;
         }
     </style>
 </head>
-<body>
-    <h1>Welcome to A Student's Manual for a First Course in GR Website!</h1>
-    <p>This is my new personal website, hosted for free on GitHub Pages.</p>
-    <p>I created this without using Jekyll by just adding an HTML file to my repository.</p>
+<body class="text-gray-800 antialiased">
+
+    <!-- Page Container -->
+    <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Header Section -->
+        <header class="text-center mb-12 border-b pb-8">
+            <!-- EDIT THIS: Your Book Title and Subtitle -->
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Your Textbook Title</h1>
+            <p class="text-xl text-gray-600 mt-2">A Comprehensive Guide to [Your Subject]</p>
+            <!-- EDIT THIS: Your Name(s) -->
+            <p class="text-lg text-gray-800 mt-4">By [Author Name 1] and [Author Name 2]</p>
+        </header>
+
+        <!-- Main Content: Book Cover & Description -->
+        <main class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-16">
+            
+            <!-- Left Column: Book Cover -->
+            <div class="md:col-span-1">
+                <!-- 
+                  HOW TO ADD YOUR BOOK COVER:
+                  1. Upload your book cover image (e.g., "book-cover.jpg") to your GitHub repository.
+                  2. Change the `src` attribute below to the exact filename of your image.
+                -->
+                <img 
+                    src="https://placehold.co/600x800/e0e7ff/3730a3?text=Your+Book+Cover" 
+                    alt="Textbook Cover" 
+                    class="rounded-lg shadow-2xl w-full mx-auto"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x800/e0e7ff/3730a3?text=Image+Not+Found';"
+                >
+                <div class="mt-4 flex flex-col space-y-3">
+                    <!-- EDIT THIS: Update links to purchase your book -->
+                    <a href="#" class="bg-blue-600 text-white text-center font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition-all duration-300">Buy on Amazon</a>
+                    <a href="#" class="bg-gray-700 text-white text-center font-bold py-3 px-4 rounded-lg hover:bg-gray-800 transition-all duration-300">Publisher's Page</a>
+                </div>
+            </div>
+
+            <!-- Right Column: Description & Features -->
+            <div class="md:col-span-2">
+                <h2 class="font-serif text-3xl font-bold text-gray-900 mb-4">About the Book</h2>
+                <!-- EDIT THIS: A description of your book -->
+                <div class="text-lg text-gray-700 space-y-4">
+                    <p>
+                        This textbook provides a foundational understanding of [Your Subject], designed for undergraduate and graduate students. It covers key concepts from first principles, building up to advanced topics and cutting-edge research.
+                    </p>
+                    <p>
+                        With over [Number] exercises, real-world case studies, and detailed illustrations, students will gain the practical skills needed to excel in the field.
+                    </p>
+                </div>
+
+                <h3 class="font-serif text-2xl font-bold text-gray-900 mt-8 mb-4">Key Features</h3>
+                <!-- EDIT THIS: Key features of your book -->
+                <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
+                    <li>Comprehensive coverage of [Topic 1] and [Topic 2].</li>
+                    <li>Clear examples and step-by-step problem-solving guides.</li>
+                    <li>Includes supplementary materials like code samples and datasets.</li>
+                    <li>End-of-chapter exercises to test understanding.</li>
+                </ul>
+            </div>
+        </main>
+
+        <!-- News Section -->
+        <section id="news" class="py-12 bg-white rounded-lg shadow-sm">
+            <div class="px-6">
+                <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 border-b pb-4">News & Updates</h2>
+                <!-- EDIT THIS: Add your news items here -->
+                <div class="space-y-4 text-lg">
+                    <h3 class="font-bold text-xl text-gray-800">New Edition Coming Next Year!</h3>
+                    <p class="text-gray-700">
+                        <span class="font-semibold text-gray-600">[June 25, 2025]:</span> We are excited to announce that work is underway for the **Second Edition** of the textbook. It is planned for publication in **[Month, Year]**. The new edition will feature updated content, new chapters on [New Topic 1] and [New Topic 2], and a revised set of exercises. Thank you to the community for all the valuable feedback!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Errata Section -->
+        <section id="errata" class="py-12">
+             <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 border-b pb-4">Errata (First Edition)</h2>
+             <p class="text-lg text-gray-600 mb-6">We are grateful to our readers for identifying errors. If you find an error not listed here, please contact us at <a href="mailto:your.email@example.com" class="text-blue-600 hover:underline">[your.email@example.com]</a>.</p>
+             <!-- EDIT THIS: Add errata items to the table below -->
+             <div class="overflow-x-auto">
+                 <table class="min-w-full bg-white rounded-lg shadow">
+                     <thead class="bg-gray-200">
+                         <tr>
+                             <th class="py-3 px-4 text-left text-sm font-bold text-gray-600 uppercase">Page</th>
+                             <th class="py-3 px-4 text-left text-sm font-bold text-gray-600 uppercase">Location</th>
+                             <th class="py-3 px-4 text-left text-sm font-bold text-gray-600 uppercase">Correction</th>
+                         </tr>
+                     </thead>
+                     <tbody class="divide-y divide-gray-200">
+                         <tr>
+                             <td class="py-4 px-4">42</td>
+                             <td class="py-4 px-4">Equation 2.1</td>
+                             <td class="py-4 px-4">The final term should be 'y', not 'x'.</td>
+                         </tr>
+                         <tr>
+                            <td class="py-4 px-4">157</td>
+                            <td class="py-4 px-4">Line 3</td>
+                            <td class="py-4 px-4">The word "is" should be "it".</td>
+                        </tr>
+                     </tbody>
+                 </table>
+             </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="py-12 bg-white rounded-lg shadow-sm">
+            <div class="px-6">
+                <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 border-b pb-4">Resources & Files</h2>
+                <p class="text-lg text-gray-600 mb-6">Download supplementary materials for the book here.</p>
+                <!--
+                  HOW TO ADD YOUR FILES:
+                  1. Upload your files (e.g., "exercises.pdf", "solutions.pdf") to your GitHub repository.
+                  2. Change the `href` attribute for each link below to the exact filename.
+                -->
+                <ul class="list-disc list-inside text-lg space-y-3">
+                    <li><a href="exercises.pdf" class="text-blue-600 hover:underline">Chapter Exercises (PDF)</a></li>
+                    <li><a href="lecture-slides.zip" class="text-blue-600 hover:underline">Lecture Slides (ZIP)</a></li>
+                    <li><a href="code-samples.zip" class="text-blue-600 hover:underline">Code Samples from the Book (ZIP)</a></li>
+                    <li><a href="datasets.zip" class="text-blue-600 hover:underline">Datasets (ZIP)</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-16 pt-8 border-t">
+            <!-- EDIT THIS: Your name and current year -->
+            <p class="text-gray-600">&copy; 2025 [Author Name]. All rights reserved.</p>
+        </footer>
+
+    </div>
 </body>
 </html>
