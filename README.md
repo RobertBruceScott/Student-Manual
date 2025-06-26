@@ -1,1 +1,1 @@
-Here I put things related to my two textbooks.
+Here I put things related to my GR textbook.
