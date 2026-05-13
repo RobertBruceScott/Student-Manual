@@ -1,191 +1,368 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- EDIT THIS: Change the title to your book's title -->
-    <title>A Student's Manual for A First Course in General Relativity - Official Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Tailwind CSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <title>A Student's Manual for A First Course in General Relativity</title>
 
-    <!-- Google Fonts: Source Serif Pro for a classic, readable look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text: #222;
+      --muted: #555;
+      --border: #d8d8d8;
+      --soft-border: #e7e7e7;
+      --background: #fafafa;
+      --panel: #ffffff;
+      --accent: #4a6fa5;
+      --accent-soft: #f0f4f8;
+      --link: #0645ad;
+    }
 
-    <style>
-        body {
-            font-family: 'Source Sans 3', sans-serif;
-            background-color: #f9fafb; /* A light, academic-friendly gray */
-        }
-        h1, h2, h3, h4, .font-serif {
-            font-family: 'Source Serif 4', serif;
-        }
-    </style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2rem;
+      color: var(--text);
+      background: var(--background);
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+      padding-bottom: 1.25rem;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.25;
+      color: #111;
+    }
+
+    h1 {
+      font-size: 2.15rem;
+      margin-bottom: 0.35rem;
+    }
+
+    h2 {
+      margin-top: 2.75rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.25rem;
+    }
+
+    h3 {
+      margin-top: 1.5rem;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    a {
+      color: var(--link);
+    }
+
+    ul {
+      padding-left: 1.35rem;
+    }
+
+    li {
+      margin-bottom: 0.45rem;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1rem 0;
+      background: var(--panel);
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.55rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f2f2f2;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      margin-top: 0.25rem;
+      color: #444;
+    }
+
+    .author {
+      font-size: 1.05rem;
+      margin-top: 0.5rem;
+    }
+
+    .notice {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.15rem;
+      margin: 1.5rem 0;
+    }
+
+    .edition-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.35rem;
+      margin: 1.25rem 0;
+      border-radius: 6px;
+    }
+
+    .edition-card h2 {
+      margin-top: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .metadata {
+      font-size: 0.96rem;
+      color: #444;
+      background: #fbfbfb;
+      border: 1px solid var(--soft-border);
+      padding: 0.85rem 1rem;
+      border-radius: 5px;
+    }
+
+    .resources li {
+      margin-bottom: 0.85rem;
+    }
+
+    .small {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+  </style>
 </head>
-<body class="text-gray-800 antialiased">
 
-    <!-- Page Container -->
-    <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-12">
+<body>
+  <header>
+    <h1>A Student's Manual for <em>A First Course in General Relativity</em></h1>
+    <p class="subtitle">
+      Solutions, supplementary problems, and computational resources for Bernard Schutz's textbook
+    </p>
+    <p class="author">Robert B. Scott</p>
+  </header>
 
-        <!-- Header Section -->
-        <header class="text-center mb-12 border-b pb-8">
-            <!-- EDIT THIS: Your Book Title and Subtitle -->
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">A Student's Manual for A First Course in General Relativity</h1>
-            <p class="text-xl text-gray-600 mt-2">The perfect accompaniment to Schutz's textbook.</p>
-            <!-- EDIT THIS: Your Name(s) -->
-            <p class="text-lg text-gray-800 mt-4">By Robert B. Scott</p>
-        </header>
+  <main>
+    <section class="notice">
+      <p>
+        This page contains information and resources for both editions of
+        <em>A Student's Manual for A First Course in General Relativity</em>.
+        The forthcoming second edition accompanies the third edition of Bernard Schutz's
+        <em>A First Course in General Relativity</em>. The first-edition material is retained below
+        as an archive for readers using Schutz's second edition.
+      </p>
+    </section>
 
-        <!-- Main Content: Book Cover & Description -->
-        <main class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-16">
-            
-            <!-- Left Column: Book Cover -->
-            <div class="md:col-span-1">
-                <!-- 
-                  HOW TO ADD YOUR BOOK COVER:
-                  1. Upload your book cover image (e.g., "book-cover.jpg") to your GitHub repository.
-                  2. Change the `src` attribute below to the exact filename of your image.
-                -->
-                <img 
-                    src="jacket.gif" 
-                    alt="Textbook Cover" 
-                    class="rounded-lg shadow-2xl w-full mx-auto"
-                    onerror="this.onerror=null;this.src='https://placehold.co/600x800/e0e7ff/3730a3?text=Image+Not+Found';"
-                >
-                <div class="mt-4 flex flex-col space-y-3">
-                    <!-- EDIT THIS: Update links to purchase your book -->
-                    <a href="#" class="bg-blue-600 text-white text-center font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition-all duration-300">Please don't buy on Amazon</a>
-                    <a href="https://www.cambridge.org/fr/universitypress/subjects/physics/cosmology-relativity-and-gravitation/students-manual-first-course-general-relativity?format=PB" class="bg-gray-700 text-white text-center font-bold py-3 px-4 rounded-lg hover:bg-gray-800 transition-all duration-300">Publisher's Page</a>
-                </div>
-            </div>
+    <section id="second-edition" class="edition-card">
+      <h2>Second Edition</h2>
 
-            <!-- Right Column: Description & Features -->
-            <div class="md:col-span-2">
-                <h2 class="font-serif text-3xl font-bold text-gray-900 mb-4">About the Book</h2>
-                <!-- EDIT THIS: A description of your book -->
-                <div class="text-lg text-gray-700 space-y-4">
-                    <p>
-                    This comprehensive student manual has been designed to accompany the leading textbook by Bernard Schutz, 
-                        A First Course in General Relativity, and uses detailed solutions, cross-referenced to several introductory 
-                        and more advanced textbooks, to enable self-learners, undergraduates and postgraduates to master general 
-                        relativity through problem solving. The perfect accompaniment to Schutz's textbook, this manual guides the 
-                        reader step-by-step through over 200 exercises, with clear easy-to-follow derivations.
-                    </p>
-                    
-                </div>
+      <p>
+        The forthcoming second edition of
+        <em>A Student's Manual for A First Course in General Relativity</em>
+        accompanies the third edition of Bernard Schutz's
+        <em>A First Course in General Relativity</em>.
+      </p>
 
-                <h3 class="font-serif text-2xl font-bold text-gray-900 mt-8 mb-4">Key Features</h3>
-                <!-- EDIT THIS: Key features of your book -->
-                <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
-                    <li>Detailed solutions to almost half of Schutz's exercises.</li>
-                    <li>125 new supplementary problems that address the subtle points of each chapter.</li>
-                    <li>References to other mathematics and physics textbooks to help fill in the gaps needed to learn relativity.</li>
-                    <li>Includes a Maple Worksheet with plots and numerical and symbolic computations.</li>
-                    <li>Appendix with the metric, Christoffel symbols etc. for important spacetimes and other key mathematical 
-                        results, likes series expansions, that are used repeatedly throughout the text.</li>
-                </ul>
-            </div>
-        </main>
+      <p>
+        The new edition provides step-by-step guidance through more than 200 selected
+        exercises, with detailed solutions and explanatory comments cross-referenced to
+        the relevant equations and sections in Schutz's text. It also includes 168
+        supplementary problems designed to highlight conceptual challenges and direct
+        readers to useful supporting literature.
+      </p>
 
-        <!-- News Section -->
-        <section id="news" class="py-12 bg-white rounded-lg shadow-sm">
-            <div class="px-6">
-                <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 border-b pb-4">News & Updates</h2>
-                <!-- EDIT THIS: Add your news items here -->
-                <div class="space-y-4 text-lg">
-                    <h3 class="font-bold text-xl text-gray-800">New Edition Coming Next Year!</h3>
-                    <p class="text-gray-700">
-                        <span class="font-semibold text-gray-600">[June 25, 2025]:</span> I am excited to announce that 
-                        work is underway for the **Second Edition** of the textbook. A specific date is not yet planned for publication, but it will probably be early 
-                        2026. By the end of June, 2025 I will have submitted the first draft to CUP. The new edition will accompany the third edition of Schutz's textbook, which includes a 
-                        new chapter, Chapter 12, on gravitational wave astronomy, and new material and exercises for the applications of general
-                        relativity covered in Schutz's chapters 9 through 13. As with the first edition of my book, I strive to 
-                        provide detailed solutions to about half of the new exercises and to provide a similar number of new exercises.
-                        The new edition uses <a href="https://www.wolfram.com/mathematica/" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors">Mathematica</a> rather than Maple. Thank you to the community for all the valuable feedback!
-                    </p>
-                </div>
-            </div>
-        </section>
+      <p>
+        The book includes a comprehensive index with bolded keywords, as well as an
+        appendix of useful mathematical and physical results, making it useful both as
+        a study guide and as a lasting reference for advanced undergraduate students,
+        graduate students, instructors, and self-directed learners.
+      </p>
 
-        <!-- Errata Section -->
-        <section id="errata" class="py-12">
-             <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 border-b pb-4">Errata (First Edition)</h2>
-             <p class="text-lg text-gray-600 mb-6">I am grateful to my readers for identifying errors. If you find an error not listed here, please contact me at <a href="mailto:Gab8piTab@gmail.com" class="text-blue-600 hover:underline">Gab8piTab@gmail.com</a>.</p>
-             <!-- EDIT THIS: Add errata items to the table below -->
-             <div class="overflow-x-auto">
-                 <table class="min-w-full bg-white rounded-lg shadow">
-                     <thead class="bg-gray-200">
-                         <tr>
-                             <th class="py-3 px-4 text-left text-sm font-bold text-gray-600 uppercase">Exercise</th>
-                             <th class="py-3 px-4 text-left text-sm font-bold text-gray-600 uppercase">Location</th>
-                             <th class="py-3 px-4 text-left text-sm font-bold text-gray-600 uppercase">Correction</th>
-                            <th class="py-3 px-4 text-left text-sm font-bold text-gray-600 uppercase">Thanks to</th>
+      <p class="metadata">
+        <strong>Status:</strong> Second edition in preparation<br />
+        <strong>Anticipated publication:</strong> late summer 2026<br />
+        <strong>ISBN:</strong> 978-1-009-17726-9 Paperback<br />
+        <strong>DOI:</strong> 10.1017/9781009177276<br />
+        <strong>Publisher:</strong> Cambridge University Press
+      </p>
 
-                         </tr>
-                     </thead>
-                     <tbody class="divide-y divide-gray-200">
-                         <tr>
-                             <td class="py-4 px-4">Solution to Exer. 12.13</td>
-                             <td class="py-4 px-4">First equation, first line. </td>
-                             <td class="py-4 px-4">The second term should be +, not -. </td>
-                            <td class="py-4 px-4">Spotted by Alon Brook-Ray. </td>
+      <p>
+        <a href="https://www.cambridge.org/highereducation/isbn/9781009177269">
+          Publisher's page for the second edition
+        </a>
+      </p>
 
-                         </tr>
-           
-                     </tbody>
-                     <tbody class="divide-y divide-gray-200">
-                         <tr>
-                             <td class="py-4 px-4">Solution to Exer. 10.17</td>
-                             <td class="py-4 px-4">Numerical routine for rho in Maple worksheet. </td>
-                             <td class="py-4 px-4">Changed power from 4/3 to 3/4. </td>
-                            <td class="py-4 px-4">Spotted by Shafayat Shawqi</td>
+      <h3>What's new in the second edition?</h3>
 
-                         </tr>
-           
-                     </tbody>
-                 </table>
-             </div>
-        </section>
+      <ul>
+        <li>Revised to accompany the third edition of Schutz's textbook.</li>
+        <li>New material supporting Schutz's chapter on gravitational wave astronomy.</li>
+        <li>Substantial updates to the later applications chapters.</li>
+        <li>Solutions to about half of the new exercises in Schutz's third edition.</li>
+        <li>New hints and supplementary problems in most chapters.</li>
+        <li>Improvements to many of the solutions in the earlier chapters.</li>
+        <li>A new Mathematica notebook replacing the older Maple worksheet.</li>
+        <li>Use of boldface keywords to help readers scan for indexed terms.</li>
+        <li>Correction of terminology from “Lorentz gauge” to “Lorenz gauge.”</li>
+      </ul>
+    </section>
 
-        <!-- Resources Section -->
-        <section id="resources" class="py-12 bg-white rounded-lg shadow-sm">
-            <div class="px-6">
-                <h2 class="font-serif text-3xl font-bold text-gray-900 mb-6 border-b pb-4">Resources & Files</h2>
-                <p class="text-lg text-gray-600 mb-6">Download supplementary materials for the book here.</p>
-                <!--
-                  HOW TO ADD YOUR FILES:
-                  1. Upload your files (e.g., "exercises.pdf", "solutions.pdf") to your GitHub repository.
-                  2. Change the `href` attribute for each link below to the exact filename.
-                -->
-                <ul class="list-disc list-inside text-lg space-y-3">
-                    <li><a href="Scott_GR_Student_Manual_v2021.mw" class="text-blue-600 hover:underline">Maple Worksheet </a></li>
-                        This is no longer supported. 
-                        
-                     <li><a href="Scott_GR_Student_Manual_v1.nb" class="text-blue-600 hover:underline">Mathematica notebook </a></li>
-                         to support the new edition of the Student's Manual, which is to be published soon! (you need the proprietary software Wolfram Mathematica to open this)
-                </ul>
-            </div>
-        </section>
-        <!-- Contact / Links Section -->
-        <section id="contact" class="mb-16">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b pb-2">Links</h2>
-            <!-- EDIT THIS: Add your professional links -->
-            <div class="flex flex-wrap gap-4 text-lg">
-                <a href="mailto:robert.scott@univ-brest.fr" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors">Email</a>
-                <a href="https://github.com/RobertBruceScott" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors">GitHub</a>
-                <a href="https://robertbrucescott.github.io/Research/" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors">Author's research page on GitHub</a>
-            </div>
-        </section>
+    <section id="second-edition-resources">
+      <h2>Second Edition Resources</h2>
 
-        
-        <!-- Footer -->
-        <footer class="text-center mt-16 pt-8 border-t">
-            <!-- EDIT THIS: Your name and current year -->
-            <p class="text-gray-600">&copy; June 2025 Robert B. Scott. All rights reserved.</p>
-        </footer>
+      <p>
+        The following resources support the second edition and Schutz's third edition.
+      </p>
 
-    </div>
+      <ul class="resources">
+        <li>
+          <a href="Scott_GR_Student_Manual_v1.nb">Mathematica notebook</a><br />
+          A Wolfram Mathematica notebook supporting the second edition.
+        </li>
+        <li>
+          <a href="https://www.cambridge.org/scott-2">Cambridge online resources</a><br />
+          Additional online resources for the second edition.
+        </li>
+      </ul>
+    </section>
+
+    <section id="second-edition-errata">
+      <h2>Errata: Second Edition</h2>
+
+      <p>
+        No second-edition errata are listed yet.
+      </p>
+
+      <p>
+        If you find an error in the second edition, please check this page first. If the error
+        is not listed, please send a correction to
+        <a href="mailto:Gab8piTab@gmail.com">Gab8piTab@gmail.com</a>.
+      </p>
+    </section>
+
+    <section id="first-edition" class="edition-card">
+      <h2>First Edition Archive</h2>
+
+      <p>
+        The first edition of
+        <em>A Student's Manual for A First Course in General Relativity</em>
+        was published in 2016 and accompanies the second edition of Bernard Schutz's
+        textbook. These files are retained for readers and instructors still using that edition.
+      </p>
+
+      <p>
+        The first edition provides detailed solutions to many of Schutz's exercises, together
+        with supplementary problems and references to other mathematics and physics texts.
+      </p>
+
+      <p>
+        <a href="https://www.cambridge.org/9781107638570">
+          Publisher's page for the first edition
+        </a>
+      </p>
+    </section>
+
+    <section id="first-edition-resources">
+      <h2>First Edition Resources</h2>
+
+      <ul class="resources">
+        <li>
+          <a href="Scott_GR_Student_Manual_v2021.mw">Maple worksheet</a><br />
+          This worksheet supports the first edition. It is retained for archival use and is no
+          longer actively supported.
+        </li>
+      </ul>
+    </section>
+
+    <section id="first-edition-errata">
+      <h2>Errata: First Edition</h2>
+
+      <p>
+        I am grateful to readers who have identified errors. If you find an error not listed
+        here, please contact me at
+        <a href="mailto:Gab8piTab@gmail.com">Gab8piTab@gmail.com</a>.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Exercise</th>
+            <th>Location</th>
+            <th>Correction</th>
+            <th>Thanks to</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Solution to Exercise 12.13</td>
+            <td>First equation, first line</td>
+            <td>The second term should be +, not −.</td>
+            <td>Alon Brook-Ray</td>
+          </tr>
+          <tr>
+            <td>Solution to Exercise 10.17</td>
+            <td>Numerical routine for rho in the Maple worksheet</td>
+            <td>Changed power from 4/3 to 3/4.</td>
+            <td>Shafayat Shawqi</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="about-author">
+      <h2>About the Author</h2>
+
+      <p>
+        Robert B. Scott teaches in the physics department at the Université de Bretagne
+        Occidentale, where he specializes in general relativity, special relativity, and cosmology.
+        He previously held postdoctoral research positions at University College London and
+        Princeton University before becoming a research scientist at the University of Texas at
+        Austin.
+      </p>
+
+      <p>
+        His research includes geophysical fluid dynamics, ocean turbulence, the visualization
+        of curved spacetimes, and biophysics.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <p>
+        For errata, questions, or comments, please contact
+        <a href="mailto:Gab8piTab@gmail.com">Gab8piTab@gmail.com</a>.
+      </p>
+
+      <p>
+        <a href="https://github.com/robertbrucescott/Student-Manual">GitHub repository</a><br />
+        <a href="https://robertbrucescott.github.io/">Author's research page</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Robert B. Scott. All rights reserved.</p>
+    <p>
+      Second-edition publication information is provisional and will be updated when the book
+      is formally released.
+    </p>
+  </footer>
 </body>
 </html>
