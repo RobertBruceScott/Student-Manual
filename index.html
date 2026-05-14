@@ -18,6 +18,14 @@
       --accent-soft: #f0f4f8;
       --link: #0645ad;
     }
+        .cover-image {
+      display: block;
+      max-width: 220px;
+      height: auto;
+      margin: 0 0 1.25rem 0;
+      border: 1px solid var(--soft-border);
+      border-radius: 4px;
+    }
 
     body {
       font-family: Georgia, "Times New Roman", serif;
@@ -151,12 +159,19 @@
 
 <body>
   <header>
+  <img
+      src="front_cover.jpeg"
+      alt="Front cover of A Student's Manual for A First Course in General Relativity"
+      class="cover-image"
+    />
+
     <h1>A Student's Manual for <em>A First Course in General Relativity</em></h1>
     <p class="subtitle">
       Solutions, supplementary problems, and computational resources for Bernard Schutz's textbook
     </p>
     <p class="author">Robert B. Scott</p>
   </header>
+  
 
   <main>
     <section class="notice">
